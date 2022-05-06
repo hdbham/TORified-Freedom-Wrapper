@@ -13,6 +13,9 @@ jtorctl · A Java library for controlling a Tor instance via its control port.
 ### This branch will always be used to provide a critical use case for wrapper. 
 Unless changed downstream, this will redirect to an NGO that provides pregnant capable people with medical services via telehealth.
 
+#####
+DOWNLOAD: https://github.com/hdbham/TORified-Freedom-Wrapper/releases/tag/Prerelease
+
 Tor protects your privacy on the internet by hiding the connection 
 between your Internet address and the services you use. We believe Tor
 is reasonably secure, but please ensure you read the instructions and
