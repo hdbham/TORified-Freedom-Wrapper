@@ -12,7 +12,7 @@ jtorctl · A Java library for controlling a Tor instance via its control port.
 
 ---
 #### This branch will always be used to provide a critical use case for wrapper. 
-Until forked elsewhere, this will redirect to an NGO that provides pregnant capable people with medical services via telehealth.
+Until forked elsewhere, this will redirect to an NGO that provides humans that are pregnant-capable with medical services via telehealth.
 ---
 
 [<img alt="Download Latest Release" width="4px" src="images/image.PNG" />](https://github.com/hdbham/TORified-Freedom-Wrapper/releases/tag/Prerelease
