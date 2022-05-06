@@ -10,7 +10,7 @@ Orbot is a freely licensed open-source application developed for the Android pla
 
 jtorctl · A Java library for controlling a Tor instance via its control port.
 
-### This branch will always be used to provide a use case for wrapper. 
+### This branch will always be used to provide a critical use case for wrapper. 
 Unless changed downstream, this will redirect to an NGO that provides pregnant capable people with medical services via telehealth.
 
 Tor protects your privacy on the internet by hiding the connection 
