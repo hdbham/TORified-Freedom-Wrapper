@@ -50,7 +50,7 @@ public class MainActivity extends Activity {
 
         GenericWebViewClient webViewClient = new GenericWebViewClient();
         webViewClient.setRequestCounterListener(requestCount ->
-                runOnUiThread(() -> statusTextView.setText("Request Count: " + requestCount)));
+                runOnUiThread(() -> statusTextView.setText("Requestruet Count: " + requestCount)));
         webView.setWebViewClient(webViewClient);
 
         registerReceiver(new BroadcastReceiver() {
@@ -84,7 +84,7 @@ public class MainActivity extends Activity {
                 if (conn != null)
                 {
                     Toast.makeText(MainActivity.this, "Got Tor control connection", Toast.LENGTH_LONG).show();
-                    webView.setBackgroundColor(Color.WHITE); // take a look at the documentation on the android studio developer page: https://developer.android.com/docs
+                    webView.setBackgroundColor(Color.BLACK); // take a look at the documentation on the android studio developer page: https://developer.android.com/docs
                     webView.setLayerType(View.LAYER_TYPE_HARDWARE, null); // take a look at the documentation on the android studio developer page: https://developer.android.com/docs
                     webView.setWebViewClient(new WebViewClient()); // take a look at the documentation on the android studio developer page: https://developer.android.com/docs
                     webView.getSettings().setLoadsImagesAutomatically(true); // automatically loads images to enhance wrapper experience
@@ -110,7 +110,9 @@ public class MainActivity extends Activity {
 
             @Override
             public void onServiceDisconnected(ComponentName name) {
-
+                webView.clearCache(true); // a good practice to clear all cache to prevent loading issues
+                webView.clearHistory();
+                CookieManager.getInstance().removeAllCookies(null);
             }
         },BIND_AUTO_CREATE);
 
