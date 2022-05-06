@@ -1,3 +1,9 @@
+Inspired by The Freedom Wrapper;
+
+The Freedom Wrapper Project is an Open Source and Free Android source code project. The project has moved to an organization page at: https://github.com/The-Freedom-Wrapper-Project
+
+Built using the same dependencies used in Orbot.
+
 
 ## Tor Android
 
@@ -21,12 +27,3 @@ configure it properly. Learn more at https://torproject.org/
         
 - https://2019.www.torproject.org/docs/faq
 - https://support.torproject.org/faq/
-
-
-## How to Build
-
-Please see: https://raw.githubusercontent.com/guardianproject/tor-android/master/BUILD
-
-This can be built reproducibly using the included Vagrant VM setup.  That will
-run with either _libvirt_ or VirtualBox.  The provisioning is based on the
-"release" job in _.gitlab-ci.yml_.
