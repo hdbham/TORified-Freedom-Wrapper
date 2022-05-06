@@ -1,8 +1,8 @@
-## Inspired by The Freedom Wrapper
+# Inspired by The Freedom Wrapper
 
 The Freedom Wrapper Project is an Open Source and Free Android source code project. The project has moved to an organization page at: https://github.com/The-Freedom-Wrapper-Project
 
-# Reimagined with TOR
+## Reimagined with TOR
 
 This is native Android `TorService` built on the Tor shared library built for
 Android.  The included _libtor.so_ binaries can also be used directly as a tor
