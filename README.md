@@ -2,7 +2,7 @@
 
 The Freedom Wrapper Project is an Open Source and Free Android source code project. The project has moved to an organization page at: https://github.com/The-Freedom-Wrapper-Project
 
-## Reimagined with TOR
+## Reimagined with Tor
 
 #### Majority of the sourcecode recompiled and stripped down from Orbot with jtorctl library
 
