@@ -2,18 +2,16 @@
 
 The Freedom Wrapper Project is an Open Source and Free Android source code project. The project has moved to an organization page at: https://github.com/The-Freedom-Wrapper-Project
 
-## Reimagined with TOR via ORBOT
+## Reimagined with TOR
 
-This is native Android `TorService` built on the Tor shared library built for
-Android.  The included _libtor.so_ binaries can also be used directly as a tor
-daemon.  Binaries are available on Maven Central:
+Majority of the sourcecode recompiled and stripped down from Orbot with jtorctl library
 
-```gradle
-dependencies {
-    implementation 'info.guardianproject:tor-android:0.4.6.10'
-    implementation 'info.guardianproject:jtorctl:0.4.5.7'
-}
-```
+Orbot is a freely licensed open-source application developed for the Android platform. It acts as a front-end to the Tor binary application, and also provides an HTTP Proxy for connecting web browsers and other HTTP client applications into the Tor SOCKS interface.
+
+https://mavenlibs.com/maven/dependency/info.guardianproject/jtorctl
+jtorctl · A Java library for controlling a Tor instance via its control port.
+
+--
 
 Tor protects your privacy on the internet by hiding the connection 
 between your Internet address and the services you use. We believe Tor
