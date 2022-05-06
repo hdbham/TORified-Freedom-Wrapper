@@ -1,0 +1,32 @@
+
+# Local configuration file (sdk path, etc)
+local.properties
+
+# Windows thumbnail db
+Thumbs.db
+
+# OSX files
+.DS_Store
+
+# emacs
+*~
+
+# Android Studio
+*.iml
+.idea/
+.gradle/
+build/
+
+#tfx
+.transifexrc
+
+/external/bin/
+/external/include/
+/external/*-build-stamp
+/external/lib/
+/external/test/
+external/patches/*
+obj
+
+# Vagrant
+/.vagrant/
