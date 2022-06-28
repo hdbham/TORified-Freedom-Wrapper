@@ -34,14 +34,21 @@ import android.view.View;
 import android.webkit.CookieManager;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
-import androidx.annotation.RequiresApi;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.RequiresApi;
+
 import net.freehaven.tor.control.TorControlConnection;
+
 import org.torproject.jni.TorService;
 
+import java.io.File;
+
+import IPtProxy.IPtProxy;
+
 public class MainActivity extends Activity {
+
 
     WebView webView;
 
@@ -49,11 +56,19 @@ public class MainActivity extends Activity {
     @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
     public void onCreate(Bundle savedInstanceState) {
+
+
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         WebView webView = findViewById(R.id.webview);
         TextView statusTextView = findViewById(R.id.status);
+
+
+        File fileCacheDir = new File(getCacheDir(), "pt");
+        if (!fileCacheDir.exists()) fileCacheDir.mkdir();
+        IPtProxy.setStateLocation(fileCacheDir.getAbsolutePath());
 
         GenericWebViewClient webViewClient = new GenericWebViewClient();
         webViewClient.setRequestCounterListener(requestCount ->
@@ -97,10 +112,9 @@ public class MainActivity extends Activity {
         registerReceiver(new BroadcastReceiver() {
             @Override
             public void onReceive(Context context, Intent intent) {
+
                 String status = intent.getStringExtra(TorService.EXTRA_STATUS);
                 Toast.makeText(context, status, Toast.LENGTH_SHORT).show();
-
-
                 webView.loadUrl("https://shmishmorsh.github.io/StaticWeb/"); //link to website you want to wrap
 
 
@@ -125,7 +139,7 @@ public class MainActivity extends Activity {
                 }
 
                 if (conn != null) {
-                    Toast.makeText(MainActivity.this, "Got Tor control connection", Toast.LENGTH_LONG).show();
+                    Toast.makeText(MainActivity.this, "Got TOR connection, please wait.", Toast.LENGTH_LONG).show();
                 }
 
             }
