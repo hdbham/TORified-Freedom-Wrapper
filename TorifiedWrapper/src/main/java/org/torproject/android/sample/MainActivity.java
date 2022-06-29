@@ -49,6 +49,7 @@ import IPtProxy.IPtProxy;
 
 public class MainActivity extends Activity {
 
+    private int count = 0;
 
     WebView webView;
 
@@ -57,6 +58,14 @@ public class MainActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
 
+        //where is this supposed to go. .aar for IPtProxy does not explain classes
+            File fileCacheDir = new File(getCacheDir(), "pt");
+            if (!fileCacheDir.exists()) fileCacheDir.mkdir();
+
+            IPtProxy.setStateLocation(fileCacheDir.getAbsolutePath());
+
+
+
 
 
         super.onCreate(savedInstanceState);
@@ -64,11 +73,6 @@ public class MainActivity extends Activity {
 
         WebView webView = findViewById(R.id.webview);
         TextView statusTextView = findViewById(R.id.status);
-
-
-        File fileCacheDir = new File(getCacheDir(), "pt");
-        if (!fileCacheDir.exists()) fileCacheDir.mkdir();
-        IPtProxy.setStateLocation(fileCacheDir.getAbsolutePath());
 
         GenericWebViewClient webViewClient = new GenericWebViewClient();
         webViewClient.setRequestCounterListener(requestCount ->
